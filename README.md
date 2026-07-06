@@ -24,7 +24,7 @@
 
 **Gerçek Türkiye fiyatları** · 8 mağaza · 38.380 oyun · tek bakışta en ucuzu bul.
 
-[🚀 Canlı Demo](https://pricespawn-kutluhans-projects-93876a9e.vercel.app) · [⚡ ITAD API](https://docs.isthereanydeal.com/) · [☁️ Vercel](https://vercel.com)
+[🚀 Canlı Demo](https://pricespawn.vercel.app) · [⚡ ITAD API](https://docs.isthereanydeal.com/) · [☁️ Vercel](https://vercel.com)
 
 </div>
 

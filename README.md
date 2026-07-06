@@ -22,7 +22,7 @@
 
 ### **PriceSpawn** — Hangisi daha ucuz? Türkiye için oyun fiyatı karşılaştırma.
 
-**Gerçek Türkiye fiyatları** · 7 mağaza · 549 oyun · tek bakışta en ucuzu bul.
+**Gerçek Türkiye fiyatları** · 8 mağaza · 38.380 oyun · tek bakışta en ucuzu bul.
 
 [🚀 Canlı Demo](https://pricespawn-kutluhans-projects-93876a9e.vercel.app) · [⚡ ITAD API](https://docs.isthereanydeal.com/) · [☁️ Vercel](https://vercel.com)
 
@@ -52,7 +52,7 @@ oyunlar da gerçek veriyle gelir. Hesap/giriş yoktur — sadece bakılır.
 
 | Özellik | Açıklama |
 |--------|----------|
-| 🔴 **Gerçek TR Fiyatları** | 7 mağazanın canlı Türkiye fiyatı; sahte/dolar-tahmini yok. |
+| 🔴 **Gerçek TR Fiyatları** | 8 mağazanın canlı Türkiye fiyatı; sahte/dolar-tahmini yok. |
 | 🏷️ **Gerçek İndirimler** | Mağazaların anlık indirim yüzdeleri (ITAD `cut`). |
 | 📉 **Tarihî En Düşük** | Her oyunun gerçek tüm-zamanların-en-düşük fiyatı, mağaza + tarihle. |
 | 🎁 **Canlı Ücretsiz Oyunlar** | Epic'te şu an ücretsiz olan oyunlar (keysiz public API). |
@@ -76,7 +76,7 @@ gerçek snapshot'larla **birikmektedir** — dürüstçe etiketlidir).
 
 | Kaynak | Ne için | Yöntem | Gerçek mi? |
 |--------|---------|--------|:---:|
-| **IsThereAnyDeal** | Steam · Epic · GOG · Xbox · Ubisoft · Humble TR fiyatı | `games/prices/v3?country=TR` (Steam appid → ITAD id) | ✅ |
+| **IsThereAnyDeal** | Steam · Epic · GOG · Xbox · Ubisoft · EA App · Humble TR fiyatı | `games/prices/v3?country=TR` (Steam appid → ITAD id) | ✅ |
 | **IsThereAnyDeal** | Tarihî en düşük fiyat | `games/storelow/v2?country=TR` | ✅ |
 | **PlayStation Store** | PS Store TR fiyatı | Arama sayfası `__NEXT_DATA__` JSON'undan ayrıştırma | ✅ |
 | **Steam appdetails** | Katalog: başlık, tür, yıl, puan, kapak | `api/appdetails` (oyun ekleme/üretim) | ✅ |
@@ -91,17 +91,18 @@ etiket + inceleme puanı** çekilip otomatik eklendi.
 
 ## 📊 Canlı Kapsam
 
-> 549 katalog oyunu · **543'ünde canlı gerçek fiyat** · **547 gerçek tarihî dip**
+> 38.380 katalog oyunu
 
-| Mağaza | Gerçek TR fiyatı olan oyun | Kaynak |
+| Mağaza | Oyun Sayısı | Kaynak |
 |--------|:--:|--------|
-| 🟦 Steam | **517** | ITAD |
-| 🟦 PlayStation Store | **393** | PS Store scrape |
-| ⬜ Epic Games | **286** | ITAD |
-| 🟥 Humble Store | **251** | ITAD |
-| 🟪 GOG | **208** | ITAD |
-| 🟩 Xbox (Microsoft Store) | **177** | ITAD |
-| 🟦 Ubisoft Store | **18** | ITAD |
+| 🟦 Steam | **38380** | ITAD |
+| 🟥 Humble Store | **6222** | ITAD |
+| 🟪 GOG | **4195** | ITAD |
+| ⬜ Epic Games | **3041** | ITAD |
+| 🟦 PlayStation Store | **1492** | PS Store scrape |
+| 🟩 Xbox Store | **704** | ITAD |
+| 🟦 Ubisoft Store | **111** | ITAD |
+| 🔴 EA App | **0** | ITAD |
 
 <div align="center">
 <img src="docs/screenshots/palette.png" alt="⌘K komut paleti" width="49%" />
@@ -158,7 +159,7 @@ PriceSpawn/
 │   │   └── takip/           # fiyat alarmı (localStorage)
 │   ├── components/          # billboard · game-card · price-chart · command-palette ...
 │   ├── lib/                 # db · fetchers · price · search · live · history
-│   └── data/                # games.ts (549 oyun katalog) · free.ts
+│   └── data/                # games.ts (38.380 oyun katalog) · free.ts
 ├── docs/                    # spec · plan · LIVE_API_INTEGRATION.md · screenshots
 └── vercel.json              # günlük cron tanımları
 ```
@@ -204,7 +205,7 @@ Daha fazla: [`docs/LIVE_API_INTEGRATION.md`](docs/LIVE_API_INTEGRATION.md)
 
 | Veri | Durum |
 |------|:--:|
-| Mağaza fiyatları (7 mağaza) | ✅ Gerçek (canlı) |
+| Mağaza fiyatları (8 mağaza) | ✅ Gerçek (canlı) |
 | İndirim yüzdeleri | ✅ Gerçek |
 | Tarihî en düşük fiyat | ✅ Gerçek (ITAD) |
 | Ücretsiz oyunlar | ✅ Gerçek (Epic, canlı) |
